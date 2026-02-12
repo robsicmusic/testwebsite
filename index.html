@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robsic - Sample Packs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 50% 0%, #1b0028, #000000 60%);
+  color: white;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 100px 8%;
+}
+
+h1, h2 {
+  font-weight: 800;
+}
+
+p {
+  color: #aaa;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary {
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+  color: white;
+}
+
+.primary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.outline {
+  border: 1px solid #444;
+  color: white;
+}
+
+.outline:hover {
+  background: #111;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero small {
+  letter-spacing: 3px;
+  color: #a855f7;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* PRODUCTS */
+.products h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #0e0e0e;
+  border-radius: 20px;
+  padding: 25px;
+  transition: 0.3s ease;
+  border: 1px solid #1c1c1c;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #a855f7;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #a855f7;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.audio-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.audio-btn:hover {
+  border-color: #a855f7;
+}
+
+/* SPOTIFY */
+.spotify {
+  text-align: center;
+}
+
+.spotify iframe {
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 60px 0;
+  border-top: 1px solid #111;
+  margin-top: 60px;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #a855f7;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+  section {
+    padding: 80px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <small>ROBSIC</small>
+  <h1>Bedroom</h1>
+  <p>Just a guy making sounds in his room. Check out my sample packs, presets, and tracks.</p>
+
+  <div class="hero-buttons">
+    <a href="#products" class="button primary">Browse Packs</a>
+    <a href="#spotify" class="button outline">Listen on Spotify</a>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <h2>My Packs</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Robsic Sample Pack Vol. 1</h3>
+      <div class="price">$19.99</div>
+      <button class="audio-btn" onclick="playAudio('audio1')">▶ Preview Demo</button>
+      <audio id="audio1" src="demo1.mp3"></audio>
+      <a href="#" class="button primary">Get This Pack</a>
+    </div>
+
+    <div class="card">
+      <h3>Ethereal Synths</h3>
+      <div class="price">$39.99</div>
+      <button class="audio-btn" onclick="playAudio('audio2')">▶ Preview Demo</button>
+      <audio id="audio2" src="demo2.mp3"></audio>
+      <a href="#" class="button primary">Get This Pack</a>
+    </div>
+
+    <div class="card">
+      <h3>Vocal Chops Essentials</h3>
+      <div class="price">$24.99</div>
+      <button class="audio-btn" onclick="playAudio('audio3')">▶ Preview Demo</button>
+      <audio id="audio3" src="demo3.mp3"></audio>
+      <a href="#" class="button primary">Get This Pack</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPOTIFY -->
+<section class="spotify" id="spotify">
+  <h2>Listen on Spotify</h2>
+  <p>Check out my latest tracks and playlists</p>
+
+  <iframe style="border-radius:12px" 
+  src="https://open.spotify.com/embed/artist/YOUR_ARTIST_ID" 
+  width="100%" height="380" 
+  frameBorder="0" allowfullscreen="" 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+</section>
+
+<footer>
+  <p>© 2026 Robsic</p>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
+    <a href="#">TikTok</a>
+  </div>
+</footer>
+
+<script>
+function playAudio(id) {
+  const audio = document.getElementById(id);
+
+  document.querySelectorAll("audio").forEach(a => {
+    if (a !== audio) a.pause();
+  });
+
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
+
+</body>
+</html>
