@@ -100,7 +100,7 @@ p{color:#aaa}
   font-weight:600;
 }
 
-/* PACK DETAILS - Always visible now, no expansion */
+/* PACK DETAILS */
 .pack-details{
   margin:15px 0;
 }
@@ -133,13 +133,23 @@ p{color:#aaa}
 }
 
 .snippet{
+  margin-bottom:15px;
+}
+
+.snippet-label{
+  color:#999;
+  font-size:12px;
+  margin-bottom:6px;
+  font-weight:500;
+}
+
+.snippet-player{
   display:flex;
   align-items:center;
   gap:10px;
-  margin-bottom:12px;
 }
 
-.snippet button{
+.snippet-player button{
   width:32px;
   height:32px;
   border-radius:50%;
@@ -155,7 +165,7 @@ p{color:#aaa}
   justify-content:center;
 }
 
-.snippet button:hover{
+.snippet-player button:hover{
   background:#b366f8;
   transform:scale(1.1);
 }
@@ -217,7 +227,7 @@ footer{text-align:center;padding:60px 0;border-top:1px solid #111;margin-top:60p
   <h3>Robsic Sample Pack Vol.1</h3>
   <p class="price">$19.99</p>
   
-  <!-- Pack Details - Now always visible -->
+  <!-- Pack Details -->
   <div class="pack-details">
     <ul>
       <li>35 Synth Loops</li>
@@ -228,17 +238,29 @@ footer{text-align:center;padding:60px 0;border-top:1px solid #111;margin-top:60p
 
   <!-- Audio Snippets -->
   <div class="snippets-container">
+    <!-- ===== EDIT SNIPPET LABELS HERE ===== -->
     <div class="snippet">
-      <button onclick="play('p1a')">▶</button>
-      <div id="p1a" class="wave"></div>
+      <div class="snippet-label">Ambience Porter 150bpm</div>
+      <div class="snippet-player">
+        <button onclick="play('p1a')">▶</button>
+        <div id="p1a" class="wave"></div>
+      </div>
     </div>
+    
     <div class="snippet">
-      <button onclick="play('p1b')">▶</button>
-      <div id="p1b" class="wave"></div>
+      <div class="snippet-label">Kick - Fat Low</div>
+      <div class="snippet-player">
+        <button onclick="play('p1b')">▶</button>
+        <div id="p1b" class="wave"></div>
+      </div>
     </div>
+    
     <div class="snippet">
-      <button onclick="play('p1c')">▶</button>
-      <div id="p1c" class="wave"></div>
+      <div class="snippet-label">Snare - Metallic</div>
+      <div class="snippet-player">
+        <button onclick="play('p1c')">▶</button>
+        <div id="p1c" class="wave"></div>
+      </div>
     </div>
   </div>
 
@@ -262,17 +284,29 @@ footer{text-align:center;padding:60px 0;border-top:1px solid #111;margin-top:60p
 
   <!-- Audio Snippets -->
   <div class="snippets-container">
+    <!-- ===== EDIT SNIPPET LABELS HERE ===== -->
     <div class="snippet">
-      <button onclick="play('p2a')">▶</button>
-      <div id="p2a" class="wave"></div>
+      <div class="snippet-label">Ethereal Kick</div>
+      <div class="snippet-player">
+        <button onclick="play('p2a')">▶</button>
+        <div id="p2a" class="wave"></div>
+      </div>
     </div>
+    
     <div class="snippet">
-      <button onclick="play('p2b')">▶</button>
-      <div id="p2b" class="wave"></div>
+      <div class="snippet-label">Deep Bass</div>
+      <div class="snippet-player">
+        <button onclick="play('p2b')">▶</button>
+        <div id="p2b" class="wave"></div>
+      </div>
     </div>
+    
     <div class="snippet">
-      <button onclick="play('p2c')">▶</button>
-      <div id="p2c" class="wave"></div>
+      <div class="snippet-label">Atmospheric FX</div>
+      <div class="snippet-player">
+        <button onclick="play('p2c')">▶</button>
+        <div id="p2c" class="wave"></div>
+      </div>
     </div>
   </div>
 
@@ -296,17 +330,29 @@ footer{text-align:center;padding:60px 0;border-top:1px solid #111;margin-top:60p
 
   <!-- Audio Snippets -->
   <div class="snippets-container">
+    <!-- ===== EDIT SNIPPET LABELS HERE ===== -->
     <div class="snippet">
-      <button onclick="play('p3a')">▶</button>
-      <div id="p3a" class="wave"></div>
+      <div class="snippet-label">Vocal Chop 1</div>
+      <div class="snippet-player">
+        <button onclick="play('p3a')">▶</button>
+        <div id="p3a" class="wave"></div>
+      </div>
     </div>
+    
     <div class="snippet">
-      <button onclick="play('p3b')">▶</button>
-      <div id="p3b" class="wave"></div>
+      <div class="snippet-label">Vocal Chop 2</div>
+      <div class="snippet-player">
+        <button onclick="play('p3b')">▶</button>
+        <div id="p3b" class="wave"></div>
+      </div>
     </div>
+    
     <div class="snippet">
-      <button onclick="play('p3c')">▶</button>
-      <div id="p3c" class="wave"></div>
+      <div class="snippet-label">Vocal Chop 3</div>
+      <div class="snippet-player">
+        <button onclick="play('p3c')">▶</button>
+        <div id="p3c" class="wave"></div>
+      </div>
     </div>
   </div>
 
@@ -356,7 +402,7 @@ function createWave(id,file){
 }
 
 /* ===== YOUR AUDIO FILES ===== */
-createWave("p1a","audio/Ambience 2 Porterr 150bpm - A#.mp3");
+createWave("p1a","audio/Ambience 2 Porter 150bpm - A#.mp3");
 createWave("p1b","audio/Kick Clean - Fat Low.mp3");
 createWave("p1c","audio/N-Snare 21 mettalic.mp3");
 
