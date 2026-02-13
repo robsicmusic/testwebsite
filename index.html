@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Robsic - Sample Packs</title>
+<title>Robsic — Sample Packs</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -17,9 +17,9 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at 50% 0%, #1b0028, #000000 60%);
-  color: white;
-  overflow-x: hidden;
+  background: radial-gradient(circle at 50% -20%, #2a0040, #000 60%);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 section {
@@ -28,34 +28,36 @@ section {
 
 h1, h2 {
   font-weight: 800;
+  letter-spacing: -1px;
 }
 
 p {
-  color: #aaa;
+  color: #9ca3af;
 }
 
 .button {
   display: inline-block;
-  padding: 14px 28px;
-  border-radius: 30px;
+  padding: 14px 32px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .primary {
   background: linear-gradient(90deg, #a855f7, #6366f1);
   color: white;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
 
 .primary:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.7);
 }
 
 .outline {
-  border: 1px solid #444;
-  color: white;
+  border: 1px solid #333;
+  color: #fff;
 }
 
 .outline:hover {
@@ -64,20 +66,19 @@ p {
 
 /* HERO */
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 140px;
+  padding-bottom: 80px;
   text-align: center;
 }
 
 .hero small {
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+  font-size: 13px;
   color: #a855f7;
 }
 
 .hero h1 {
-  font-size: 72px;
+  font-size: 52px;
   margin: 20px 0;
 }
 
@@ -85,6 +86,7 @@ p {
   max-width: 600px;
   margin: auto;
   margin-bottom: 40px;
+  font-size: 18px;
 }
 
 .hero-buttons {
@@ -96,51 +98,56 @@ p {
 /* PRODUCTS */
 .products h2 {
   text-align: center;
+  font-size: 36px;
   margin-bottom: 60px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 40px;
 }
 
 .card {
-  background: #0e0e0e;
-  border-radius: 20px;
-  padding: 25px;
-  transition: 0.3s ease;
-  border: 1px solid #1c1c1c;
+  background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid #1f1f1f;
+  transition: all 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   border-color: #a855f7;
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
 }
 
 .card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 20px;
 }
 
 .price {
   color: #a855f7;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .audio-btn {
   width: 100%;
-  margin-bottom: 10px;
-  background: #111;
-  border: 1px solid #333;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  padding: 12px;
+  border-radius: 14px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .audio-btn:hover {
   border-color: #a855f7;
+  background: #141414;
 }
 
 /* SPOTIFY */
@@ -148,24 +155,30 @@ p {
   text-align: center;
 }
 
+.spotify h2 {
+  font-size: 36px;
+}
+
 .spotify iframe {
-  margin-top: 30px;
+  margin-top: 40px;
   border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.6);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 60px 0;
+  padding: 80px 0 40px;
   border-top: 1px solid #111;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .socials a {
-  margin: 0 10px;
-  color: #aaa;
+  margin: 0 12px;
+  color: #888;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .socials a:hover {
@@ -175,7 +188,7 @@ footer {
 /* Responsive */
 @media(max-width: 768px) {
   .hero h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
   section {
     padding: 80px 6%;
@@ -189,8 +202,8 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <small>ROBSIC</small>
-  <h1>Bedroom</h1>
-  <p>Just a guy making sounds in his room. Check out my sample packs, presets, and tracks.</p>
+  <h1>Premium Sample Packs & Sounds</h1>
+  <p>Royalty-free sounds designed for modern electronic producers. Built for impact, clarity and power.</p>
 
   <div class="hero-buttons">
     <a href="#products" class="button primary">Browse Packs</a>
@@ -234,14 +247,18 @@ footer {
 <!-- SPOTIFY -->
 <section class="spotify" id="spotify">
   <h2>Listen on Spotify</h2>
-  <p>Check out my latest tracks and playlists</p>
+  <p>Latest releases and playlists</p>
 
-  <iframe style="border-radius:12px" 
-  src="https://open.spotify.com/embed/artist/6yFdyGIQXHztc5CA5m2XJo" 
-  width="100%" height="380" 
-  frameBorder="0" allowfullscreen="" 
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  <!-- YOUR EMBED -->
+  <iframe data-testid="embed-iframe" style="border-radius:12px"
+  src="https://open.spotify.com/embed/artist/6yFdyGIQXHztc5CA5m2XJo?utm_source=generator&theme=0"
+  width="100%" height="352"
+  frameBorder="0"
+  allowfullscreen=""
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  loading="lazy">
   </iframe>
+
 </section>
 
 <footer>
@@ -271,4 +288,3 @@ function playAudio(id) {
 
 </body>
 </html>
-
