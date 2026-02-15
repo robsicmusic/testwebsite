@@ -43,23 +43,29 @@ p{color:#aaa;line-height:1.6}
   left:0;
   right:0;
   bottom:0;
-  background-image:url('images/banner.jpg');
+  background-image:url('images/banner-low-size.jpeg');
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  opacity:0.3;
+  opacity:0.6;
   z-index:0;
 }
 
-/* Fade out gradient at bottom */
+/* Fade out gradient at bottom - IMPROVED */
 .hero::after{
   content:'';
   position:absolute;
   left:0;
   right:0;
   bottom:0;
-  height:200px;
-  background:linear-gradient(to bottom, transparent, #000);
+  height:300px;
+  background:linear-gradient(to bottom, 
+    transparent 0%, 
+    rgba(0,0,0,0.3) 30%,
+    rgba(0,0,0,0.7) 60%,
+    rgba(0,0,0,0.9) 80%,
+    #000 100%
+  );
   z-index:1;
   pointer-events:none;
 }
@@ -544,18 +550,18 @@ footer p{
     <!-- PACK 2 -->
     <div class="card">
       <div class="card-image-wrapper">
-        <img src="images/pack2.jpg" alt="Ethereal Synths" class="card-image">
+        <img src="images/PresetPack-lowkb.jpeg" alt="Serum Presets Vol.1" class="card-image">
       </div>
       
       <div class="card-content">
-        <h3>Ethereal Synths</h3>
+        <h3>Serum Presets Vol.1</h3>
         <p class="price">$39.99</p>
         
         <div class="pack-details">
           <ul>
-            <li>50 Atmospheric Synths</li>
-            <li>25 MIDI Files</li>
-            <li>20 FX Samples</li>
+            <li>50 Production Ready Presets</li>
+            <li>Multi-genres fit: Bass, Trap, Ethereal, DNB</li>
+            <li>Macro and Midi Snippets for each presets</li>
           </ul>
         </div>
 
