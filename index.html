@@ -30,11 +30,42 @@ p{color:#aaa;line-height:1.6}
 .hero{
   text-align:center;
   padding-top:120px;
+  padding-bottom:120px;
   position:relative;
+  overflow:hidden;
 }
 
+/* ===== BANNER IMAGE BACKGROUND ===== */
 .hero::before{
   content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-image:url('images/banner-low-size.jpeg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  opacity:0.3;
+  z-index:0;
+}
+
+/* Fade out gradient at bottom */
+.hero::after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:200px;
+  background:linear-gradient(to bottom, transparent, #000);
+  z-index:1;
+  pointer-events:none;
+}
+
+/* Animated glow effect */
+.hero-glow{
   position:absolute;
   top:-100px;
   left:50%;
@@ -44,6 +75,7 @@ p{color:#aaa;line-height:1.6}
   background:radial-gradient(circle,rgba(168,85,247,0.15),transparent 70%);
   pointer-events:none;
   animation:pulse 4s ease-in-out infinite;
+  z-index:1;
 }
 
 @keyframes pulse{
@@ -56,21 +88,21 @@ p{color:#aaa;line-height:1.6}
   color:#a855f7;
   font-weight:600;
   position:relative;
-  z-index:1;
+  z-index:2;
 }
 
 .hero h1{
   font-size:48px;
   margin:20px 0;
   position:relative;
-  z-index:1;
+  z-index:2;
 }
 
 .hero p{
   max-width:600px;
   margin:0 auto 30px;
   position:relative;
-  z-index:1;
+  z-index:2;
 }
 
 .hero-buttons{
@@ -80,7 +112,7 @@ p{color:#aaa;line-height:1.6}
   gap:15px;
   flex-wrap:wrap;
   position:relative;
-  z-index:1;
+  z-index:2;
 }
 
 .button{
@@ -437,6 +469,7 @@ footer p{
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-glow"></div>
   <small>ROBSIC</small>
   <h1>Premium Sample Packs</h1>
   <p>Royalty-free sounds designed for modern electronic producers. Professional quality, instant download.</p>
