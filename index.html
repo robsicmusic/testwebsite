@@ -173,6 +173,36 @@ p{color:#aaa;line-height:1.6}
   color:#888;
 }
 
+/* FREE DEMO SECTION */
+.free-demo{
+  text-align:center;
+  margin-top:60px;
+  padding:40px;
+  background:linear-gradient(135deg,rgba(168,85,247,0.1),rgba(99,102,241,0.05));
+  border-radius:24px;
+  border:1px solid rgba(168,85,247,0.2);
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.free-demo h3{
+  font-size:24px;
+  margin-bottom:12px;
+  color:#fff;
+}
+
+.free-demo p{
+  color:#aaa;
+  margin-bottom:24px;
+  font-size:15px;
+}
+
+.free-demo .button{
+  font-size:16px;
+  padding:16px 40px;
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
@@ -288,8 +318,22 @@ p{color:#aaa;line-height:1.6}
 }
 
 .price{
-  color:#a855f7;
   margin:8px 0 18px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  justify-content:center;
+}
+
+.price-original{
+  color:#666;
+  font-size:18px;
+  font-weight:600;
+  text-decoration:line-through;
+}
+
+.price-discounted{
+  color:#a855f7;
   font-size:24px;
   font-weight:700;
 }
@@ -332,13 +376,13 @@ p{color:#aaa;line-height:1.6}
 }
 
 .snippet{
-  margin-bottom:12px;
+  margin-bottom:8px;
 }
 
 .snippet-label{
   color:#999;
-  font-size:11px;
-  margin-bottom:5px;
+  font-size:10px;
+  margin-bottom:4px;
   font-weight:500;
   text-transform:uppercase;
   letter-spacing:0.5px;
@@ -347,12 +391,12 @@ p{color:#aaa;line-height:1.6}
 .snippet-player{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:8px;
 }
 
 .snippet-player button{
-  width:36px;
-  height:36px;
+  width:30px;
+  height:30px;
   border-radius:50%;
   border:none;
   background:linear-gradient(135deg,#a855f7,#8b4fd8);
@@ -360,7 +404,7 @@ p{color:#aaa;line-height:1.6}
   cursor:pointer;
   transition:all 0.2s ease;
   flex-shrink:0;
-  font-size:13px;
+  font-size:11px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -379,7 +423,7 @@ p{color:#aaa;line-height:1.6}
 
 .wave{
   flex:1;
-  height:50px;
+  height:40px;
   min-width:0;
   border-radius:6px;
   overflow:hidden;
@@ -516,7 +560,10 @@ footer p{
       
       <div class="card-content">
         <h3>Robsic Sample Pack Vol.1</h3>
-        <p class="price">$19.99</p>
+        <div class="price">
+          <span class="price-original">$29.99</span>
+          <span class="price-discounted">$19.99</span>
+        </div>
         
         <div class="pack-details">
           <ul>
@@ -550,6 +597,22 @@ footer p{
               <div id="p1c" class="wave"></div>
             </div>
           </div>
+          
+          <div class="snippet">
+            <div class="snippet-label">Hi-Hat - Closed</div>
+            <div class="snippet-player">
+              <button onclick="play('p1d')" aria-label="Play sample">▶</button>
+              <div id="p1d" class="wave"></div>
+            </div>
+          </div>
+          
+          <div class="snippet">
+            <div class="snippet-label">Bass Loop</div>
+            <div class="snippet-player">
+              <button onclick="play('p1e')" aria-label="Play sample">▶</button>
+              <div id="p1e" class="wave"></div>
+            </div>
+          </div>
         </div>
 
         <a href="#" class="button">Get Pack</a>
@@ -564,7 +627,10 @@ footer p{
       
       <div class="card-content">
         <h3>Serum Presets Vol.1</h3>
-        <p class="price">$39.99</p>
+        <div class="price">
+          <span class="price-original">$59.99</span>
+          <span class="price-discounted">$39.99</span>
+        </div>
         
         <div class="pack-details">
           <ul>
@@ -576,7 +642,7 @@ footer p{
 
         <div class="snippets-container">
           <div class="snippet">
-            <div class="snippet-label">Ethereal Kick</div>
+            <div class="snippet-label">Ethereal Pad</div>
             <div class="snippet-player">
               <button onclick="play('p2a')" aria-label="Play sample">▶</button>
               <div id="p2a" class="wave"></div>
@@ -598,6 +664,22 @@ footer p{
               <div id="p2c" class="wave"></div>
             </div>
           </div>
+          
+          <div class="snippet">
+            <div class="snippet-label">Trap Lead</div>
+            <div class="snippet-player">
+              <button onclick="play('p2d')" aria-label="Play sample">▶</button>
+              <div id="p2d" class="wave"></div>
+            </div>
+          </div>
+          
+          <div class="snippet">
+            <div class="snippet-label">DnB Bass</div>
+            <div class="snippet-player">
+              <button onclick="play('p2e')" aria-label="Play sample">▶</button>
+              <div id="p2e" class="wave"></div>
+            </div>
+          </div>
         </div>
 
         <a href="#" class="button">Get Pack</a>
@@ -612,7 +694,10 @@ footer p{
       
       <div class="card-content">
         <h3>Vocal Chops Essentials</h3>
-        <p class="price">$24.99</p>
+        <div class="price">
+          <span class="price-original">$34.99</span>
+          <span class="price-discounted">$24.99</span>
+        </div>
         
         <div class="pack-details">
           <ul>
@@ -646,12 +731,35 @@ footer p{
               <div id="p3c" class="wave"></div>
             </div>
           </div>
+          
+          <div class="snippet">
+            <div class="snippet-label">Vocal Loop</div>
+            <div class="snippet-player">
+              <button onclick="play('p3d')" aria-label="Play sample">▶</button>
+              <div id="p3d" class="wave"></div>
+            </div>
+          </div>
+          
+          <div class="snippet">
+            <div class="snippet-label">Processed Vocal</div>
+            <div class="snippet-player">
+              <button onclick="play('p3e')" aria-label="Play sample">▶</button>
+              <div id="p3e" class="wave"></div>
+            </div>
+          </div>
         </div>
 
         <a href="#" class="button">Get Pack</a>
       </div>
     </div>
 
+  </div>
+  
+  <!-- FREE DEMO SECTION -->
+  <div class="free-demo">
+    <h3>Try Before You Buy</h3>
+    <p>Get a free demo pack with sample sounds from all our collections. No signup required.</p>
+    <a href="#" class="button">Download Free Demo</a>
   </div>
 </section>
 
@@ -689,7 +797,7 @@ function createWave(id,file){
       waveColor:"#444",
       progressColor:"#a855f7",
       cursorColor:"#a855f7",
-      height:50,
+      height:40,
       barWidth:2,
       barGap:1,
       responsive:true,
@@ -719,17 +827,26 @@ function createWave(id,file){
 }
 
 /* ===== YOUR AUDIO FILES ===== */
+// Pack 1
 createWave("p1a","audio/Techno Top Loop 5 - 150.mp3");
 createWave("p1b","audio/Kick Clean - Fat Low.mp3");
 createWave("p1c","audio/N-Snare 21 mettalic.mp3");
+createWave("p1d","audio/p1-hihat.mp3"); // Add your 4th audio file
+createWave("p1e","audio/p1-bass.mp3");  // Add your 5th audio file
 
+// Pack 2
 createWave("p2a","audio/p2-kick.mp3");
 createWave("p2b","audio/p2-bass.mp3");
 createWave("p2c","audio/p2-fx.mp3");
+createWave("p2d","audio/p2-lead.mp3");  // Add your 4th audio file
+createWave("p2e","audio/p2-dnb.mp3");   // Add your 5th audio file
 
+// Pack 3
 createWave("p3a","audio/p3-kick.mp3");
 createWave("p3b","audio/p3-bass.mp3");
 createWave("p3c","audio/p3-fx.mp3");
+createWave("p3d","audio/p3-loop.mp3");  // Add your 4th audio file
+createWave("p3e","audio/p3-vocal.mp3"); // Add your 5th audio file
 
 function play(id){
   // Pause all other players
