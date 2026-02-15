@@ -26,13 +26,17 @@ section{padding:90px 8%}
 h1,h2{font-weight:800;letter-spacing:-0.5px}
 p{color:#aaa;line-height:1.6}
 
-/* HERO */
+/* HERO - BANNER BREATHES, TEXT BELOW */
 .hero{
   text-align:center;
-  padding-top:120px;
-  padding-bottom:120px;
+  padding-top:0;
+  padding-bottom:80px;
   position:relative;
   overflow:hidden;
+  min-height:75vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
 }
 
 /* ===== BANNER IMAGE BACKGROUND ===== */
@@ -58,12 +62,12 @@ p{color:#aaa;line-height:1.6}
   left:0;
   right:0;
   bottom:0;
-  height:300px;
+  height:400px;
   background:linear-gradient(to bottom, 
     transparent 0%, 
-    rgba(0,0,0,0.3) 30%,
-    rgba(0,0,0,0.7) 60%,
-    rgba(0,0,0,0.9) 80%,
+    rgba(0,0,0,0.2) 20%,
+    rgba(0,0,0,0.5) 40%,
+    rgba(0,0,0,0.8) 70%,
     #000 100%
   );
   z-index:1;
@@ -73,7 +77,7 @@ p{color:#aaa;line-height:1.6}
 /* Animated glow effect */
 .hero-glow{
   position:absolute;
-  top:-100px;
+  bottom:100px;
   left:50%;
   transform:translateX(-50%);
   width:500px;
@@ -89,36 +93,35 @@ p{color:#aaa;line-height:1.6}
   50%{opacity:0.8;transform:translateX(-50%) scale(1.1)}
 }
 
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:0 5%;
+}
+
 .hero small{
   letter-spacing:4px;
   color:#a855f7;
   font-weight:600;
-  position:relative;
-  z-index:2;
+  display:block;
+  margin-bottom:15px;
 }
 
 .hero h1{
   font-size:48px;
-  margin:20px 0;
-  position:relative;
-  z-index:2;
+  margin:0 0 20px;
 }
 
 .hero p{
   max-width:600px;
   margin:0 auto 30px;
-  position:relative;
-  z-index:2;
 }
 
 .hero-buttons{
-  margin-top:30px;
   display:flex;
   justify-content:center;
   gap:15px;
   flex-wrap:wrap;
-  position:relative;
-  z-index:2;
 }
 
 .button{
@@ -452,6 +455,7 @@ footer p{
 
 /* Mobile Responsive */
 @media(max-width:768px){
+  .hero{min-height:65vh}
   .hero h1{font-size:36px}
   .hero-buttons{flex-direction:column;align-items:center}
   .button{width:80%;max-width:300px}
@@ -465,6 +469,7 @@ footer p{
 }
 
 @media(max-width:480px){
+  .hero{min-height:60vh}
   .hero h1{font-size:28px}
   .card-content{padding:20px}
 }
@@ -476,12 +481,14 @@ footer p{
 <!-- HERO -->
 <section class="hero">
   <div class="hero-glow"></div>
-  <small>ROBSIC</small>
-  <h1>Premium Sample Packs</h1>
-  <p>Royalty-free sounds designed for modern electronic producers. Professional quality, instant download.</p>
-  <div class="hero-buttons">
-    <a href="#products" class="button">Browse Packs</a>
-    <a href="mastering.html" class="button outline">Mastering Services</a>
+  <div class="hero-content">
+    <small>ROBSIC</small>
+    <h1>Premium Sample Packs</h1>
+    <p>Royalty-free sounds designed for modern electronic producers. Professional quality, instant download.</p>
+    <div class="hero-buttons">
+      <a href="#products" class="button">Browse Packs</a>
+      <a href="mastering.html" class="button outline">Mastering Services</a>
+    </div>
   </div>
 </section>
 
@@ -497,12 +504,7 @@ footer p{
     <!-- PACK 1 -->
     <div class="card">
       <div class="card-image-wrapper">
-        <!-- ===== OPTION 1: Use <img> tag (RECOMMENDED) ===== -->
         <img src="images/Sample Pack1.jpg" alt="Robsic Sample Pack Vol.1" class="card-image">
-        
-        <!-- ===== OPTION 2: Use background image (if img doesn't work) ===== 
-        <div class="card-image-bg" style="background-image:url('images/Sample Pack1.jpg')"></div>
-        -->
       </div>
       
       <div class="card-content">
