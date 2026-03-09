@@ -518,9 +518,25 @@ button.button{
   border:1px solid rgba(168,85,247,0.15);
 }
 
+.who-am-i-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:16px;
+}
+
+.who-am-i-avatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(168,85,247,0.4);
+  flex-shrink:0;
+}
+
 .who-am-i h2{
   font-size:28px;
-  margin-bottom:16px;
+  margin-bottom:0;
   letter-spacing:-0.5px;
 }
 
@@ -1158,8 +1174,11 @@ footer p{
 <!-- WHO AM I -->
 <div class="who-am-i">
   <div class="who-am-i-inner">
-    <h2>Who am I?</h2>
-    <p>I'm just a dude making electronic music in his bedroom, since 10 years now. I thought it might be interesting to offer some of the sounds I crafted myself... so you can get samples & presets no other producers have, instead of using overused Splice banks.</p>
+    <div class="who-am-i-header">
+      <img src="images/profile.jpg" alt="Robsic" class="who-am-i-avatar">
+      <h2>Who am I?</h2>
+    </div>
+    <p>10 years of making electronic music, every sound built from scratch. No templates, no Splice banks — just raw sound design accumulated over a decade of producing.<br>That's exactly why these presets sound different. You won't find them anywhere else.</p>
   </div>
 </div>
 
